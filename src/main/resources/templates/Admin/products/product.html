@@ -11,13 +11,15 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-            <li class="active">Danh sách sản phẩm</li>
+<!--            <li class="active">Danh sách sản phẩm</li>-->
+            <li class="active">Quản lý chiến dịch</li>
         </ol>
     </div><!--/.row-->
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Danh sách sản phẩm</h1>
+<!--            <h1 class="page-header">Danh sách sản phẩm</h1>-->
+            <h1 class="page-header">Quản lý chiến dịch</h1>
         </div>
         <div class="col-lg-12">
             <form th:action="@{/Admin/search}" method="get" class="form-inline">
@@ -30,13 +32,16 @@
     </div><!--/.row-->
     <div id="toolbar" class="btn-group">
         <a href="Admin/products/add_product" class="btn btn-success">
-            <i class="glyphicon glyphicon-plus"></i> Thêm sản phẩm
+<!--            <i class="glyphicon glyphicon-plus"></i> Thêm sản phẩm-->
+            <i class="glyphicon glyphicon-plus"></i> Thêm chiến dịch
         </a>
         <a href="Admin/products/upload_excel" class="btn btn-success">
-            <i class="glyphicon glyphicon-plus"></i> Thêm sản phẩm bằng Excel
+<!--            <i class="glyphicon glyphicon-plus"></i> Thêm sản phẩm bằng Excel-->
+            <i class="glyphicon glyphicon-plus"></i> Thêm chiến dịch bằng Excel
         </a>
         <a href="Admin/products/export_excel" class="btn btn-success">
-            <i class="glyphicon glyphicon-plus"></i> Xuất sản phẩm bằng Excel
+<!--            <i class="glyphicon glyphicon-plus"></i> Xuất sản phẩm bằng Excel-->
+            <i class="glyphicon glyphicon-plus"></i> Xuất chiến dịch bằng Excel
         </a>
     </div>
     <div class="row">
@@ -49,15 +54,21 @@
                             <tr>
                                 <th><input type="checkbox" id="selectAll"/></th>
                                 <th>ID</th>
-                                <th>title</th>
-                                <th>Author</th>
-                                <th>Price</th>
+<!--                                <th>title</th>-->
+                                <th>Tên chiến dịch</th>
+<!--                                <th>Author</th>-->
+                                <th>Người kêu gọi</th>
+<!--                                <th>Price</th>-->
+                                <th>Số tiền cần kêu gọi</th>
                                 <th>số lượng</th>
                                 <th>chi tiết</th>
-                                <th>Category Name</th>
-                                <th>Image</th>
-                                <th>Actions</th>
-                                <th>Add to cart</th>
+<!--                                <th>Category Name</th>-->
+                                <th>Phân loại chiến dịch</th>
+<!--                                <th>Image</th>-->
+                                <th>Hình ảnh</th>
+<!--                                <th>Actions</th>-->
+                                <th>Thao tác</th>
+<!--                                <th>Add to cart</th>-->
                             </tr>
                             </thead>
                             <tbody>
@@ -78,13 +89,13 @@
                                     <a th:href="@{/Admin/products/edit_product/{id}(id=${product.id})}" class="btn btn-success btn-sm">Edit</a>
                                     <a th:href="@{/Admin/products/delete/{id}(id=${product.id})}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
-                                <td>
-                                    <form th:action="@{/cart/add}" method="post">
-                                        <input type="number" name="quantity" min="1" value="1" class="form-control d-inline-block" style="width: 70px;">
-                                        <input type="hidden" th:value="${product.id}" name="productId"/>
-                                        <button type="submit" class="btn btn-warning btn-sm">Add to Cart</button>
-                                    </form>
-                                </td>
+<!--                                <td>-->
+<!--                                    <form th:action="@{/cart/add}" method="post">-->
+<!--                                        <input type="number" name="quantity" min="1" value="1" class="form-control d-inline-block" style="width: 70px;">-->
+<!--                                        <input type="hidden" th:value="${product.id}" name="productId"/>-->
+<!--                                        <button type="submit" class="btn btn-warning btn-sm">Add to Cart</button>-->
+<!--                                    </form>-->
+<!--                                </td>-->
                             </tr>
                             </tbody>
                         </table>

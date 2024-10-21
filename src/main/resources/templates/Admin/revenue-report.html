@@ -11,13 +11,15 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-            <li class="active">Báo cáo doanh thu</li>
+<!--            <li class="active">Báo cáo doanh thu</li>-->
+            <li class="active">Báo cáo số tiền quyên góp</li>
         </ol>
     </div><!--/.row-->
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Báo cáo doanh thu</h1>
+<!--            <h1 class="page-header">Báo cáo doanh thu</h1>-->
+            <h1 class="page-header">Báo cáo số tiền quyên góp</h1>
         </div>
         <div class="col-lg-12">
             <form th:action="@{/order/report}" method="post" class="form-inline">
@@ -38,9 +40,11 @@
     <div class="row" th:if="${totalRevenue != null}">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Kết quả báo cáo doanh thu</div>
+<!--                <div class="panel-heading">Kết quả báo cáo doanh thu</div>-->
+                <div class="panel-heading">Kết quả báo cáo số tiền quyên góp</div>
                 <div class="panel-body">
-                    <p>Doanh thu từ ngày <strong th:text="${fromDate}"></strong> đến ngày <strong th:text="${toDate}"></strong>: <strong th:text="${totalRevenue}"></strong></p>
+<!--                    <p>Doanh thu từ ngày <strong th:text="${fromDate}"></strong> đến ngày <strong th:text="${toDate}"></strong>: <strong th:text="${totalRevenue}"></strong></p>-->
+                    <p>Số tiền quyên góp từ ngày <strong th:text="${fromDate}"></strong> đến ngày <strong th:text="${toDate}"></strong>: <strong th:text="${totalRevenue}"></strong></p>
                 </div>
             </div>
         </div>
@@ -49,16 +53,22 @@
     <div class="row" th:if="${orders != null}">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Danh sách hóa đơn</div>
+<!--                <div class="panel-heading">Danh sách hóa đơn</div>-->
+                <div class="panel-heading">Danh sách quyên góp</div>
                 <div class="panel-body">
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Mã đơn hàng</th>
-                            <th>Khách hàng</th>
-                            <th>Ngày đặt hàng</th>
-                            <th>Địa chỉ giao hàng</th>
-                            <th>Tổng tiền</th>
+<!--                            <th>Mã đơn hàng</th>-->
+                            <th>Mã quyên góp</th>
+<!--                            <th>Khách hàng</th>-->
+                            <th>Người quyên góp</th>
+<!--                            <th>Ngày đặt hàng</th>-->
+                            <th>Ngày quyên góp</th>
+<!--                            <th>Địa chỉ giao hàng</th>-->
+                            <th>Khu vực quyên góp</th>
+<!--                            <th>Tổng tiền</th>-->
+                            <th>Số tiền quyên góp</th>
                         </tr>
                         </thead>
                         <tbody>

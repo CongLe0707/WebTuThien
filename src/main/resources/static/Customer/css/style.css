@@ -1,5 +1,5 @@
 :root{
-    --primary-color: #f24137;
+    --primary-color: #33CCFF;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
@@ -27,7 +27,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #ef2317;
+    background: #33CCFF;
 }
 
 .heade__top-left{
@@ -228,7 +228,7 @@ body{
 
 .header__nav-menu-wrap{
     height: 4.8rem;
-    background: #ef2317;
+    background: #33CCFF;
     display: flex;
     align-items: center;
     border-top-left-radius: 2px;

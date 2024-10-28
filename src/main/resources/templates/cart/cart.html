@@ -38,15 +38,15 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="col-6 cart__head-name">
-				Thông tin sản phẩm
-			</div>
-			<div class="col-3 cart__head-quantity">
-				Số lượng
-			</div>
-			<div class="col-3 cart__head-price">
-				Đơn giá
-			</div>
+<!--			<div class="col-6 cart__head-name">-->
+<!--				Thông tin sản phẩm-->
+<!--			</div>-->
+<!--			<div class="col-3 cart__head-quantity">-->
+<!--				Số lượng-->
+<!--			</div>-->
+<!--			<div class="col-3 cart__head-price">-->
+<!--				Đơn giá-->
+<!--			</div>-->
 		</article>
 
 		<article class="row cart__body">
@@ -59,7 +59,8 @@
 								<tr>
 									<th>Ảnh binh thuong</th>
 									<th>Tên sản phẩm</th>
-									<th>Giá</th>
+<!--									<th>Giá</th>-->
+									<th>Số tiền quyên góp</th>
 									<th>Số lượng</th>
 									<th>Thành tiền</th>
 									<th>Xóa</th>
@@ -83,7 +84,8 @@
 								</tr>
 								</tbody>
 							</table>
-							<button type="submit" class="btn btn-danger btn-sm">Cập nhật giỏ hàng</button>
+<!--							<button type="submit" class="btn btn-danger btn-sm">Cập nhật giỏ hàng</button>-->
+							<button type="submit" class="btn btn-danger btn-sm">Cập nhật</button>
 						</form>
 					</div>
 				</div>
@@ -98,7 +100,8 @@
 			<span class="col-3 col-lg-3 col-sm-3 cart__foot-price">
                 <strong th:text="${totalPrice} + ' VND'"></strong>
                 <br>
-                <button type="button" class="cart__foot-price-btn" onclick="location.href='/cart/checkout'">Mua hàng</button>
+<!--                <button type="button" class="cart__foot-price-btn" onclick="location.href='/cart/checkout'">Mua hàng</button>-->
+				<button type="button" class="cart__foot-price-btn" onclick="location.href='/cart/checkout'">Quyên góp</button>
             </span>
 		</article>
 	</div>
